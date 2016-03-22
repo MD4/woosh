@@ -21,7 +21,7 @@ io.on('connection', function (socket) {
     commands.commands.forEach(
         (command) => socket.on(
             command.toUpperCase(),
-            (data) => commands[command](
+            (data) => commands[command.toUpperCase()](
                 socket,
                 data
             )

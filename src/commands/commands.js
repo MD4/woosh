@@ -4,5 +4,5 @@ module.exports.commands = [
 ];
 
 module.exports.commands.forEach(
-    (commandName) => module.exports[commandName] = require('./' + commandName.toUpperCase())
+    (commandName) => module.exports[commandName.toUpperCase()] = require('./' + commandName)
 );
