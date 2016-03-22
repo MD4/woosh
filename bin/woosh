@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+var Server = require('../src/woosh');
+
+Server.start();

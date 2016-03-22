@@ -1,0 +1,22 @@
+{
+  "name": "woosh",
+  "version": "1.0.0",
+  "description": "Simple socket.io command based server",
+  "main": "bin/woosh",
+  "scripts": {
+    "start": "node bin/woosh"
+  },
+  "author": "Martin DEQUATREMARE (https://github.com/MD4)",
+  "homepage": "https://github.com/MD4/woosh#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MD4/woosh.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MD4/woosh/issues"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^1.4.5"
+  }
+}
