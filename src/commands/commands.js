@@ -1,6 +1,7 @@
 module.exports.commands = [
     'ping',
-    'stats'
+    'stats',
+    'say'
 ];
 
 module.exports.commands.forEach(
