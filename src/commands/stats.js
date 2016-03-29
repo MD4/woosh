@@ -1,10 +1,10 @@
 //exports
 
-module.exports = _default;
+module.exports = _default
 
 // private
 
-const symbolRes = 'STATS';
+const symbolRes = 'STATS'
 
 function _default(socket) {
 
@@ -22,12 +22,12 @@ function _default(socket) {
             'uptime'
         ].reduce(
             (memo, field) => {
-                var value = process[field];
-                memo[field] = ((value instanceof Function) ? value() : value);
-                return memo;
+                var value = process[field]
+                memo[field] = ((value instanceof Function) ? value() : value)
+                return memo
             },
             {}
         )
-    );
-    
+    )
+
 }

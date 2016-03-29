@@ -1,27 +1,26 @@
-var app = require('http').createServer(_httpHandler);
-var io = require('socket.io')(app);
-var fs = require('fs');
+var app = require('http').createServer(_httpHandler)
+var io = require('socket.io')(app)
 
-var config = require('./config/config');
+var config = require('./config/config')
 
-var packageInfo = require('../package.json');
+var packageInfo = require('../package.json')
 
-var commands = require('./commands/commands');
+var commands = require('./commands/commands')
 
 // exports
 
-module.exports.start = _start;
+module.exports.start = _start
 
 // private
 
 function _start() {
-    app.listen(config.server.port);
-    console.log('woosh server started on ws://%s:%s', config.server.host, config.server.port);
+    app.listen(config.server.port)
+    console.log('woosh server started on ws://%s:%s', config.server.host, config.server.port)
 }
 
 function _httpHandler(req, res) {
-    res.setHeader('Content-Type', 'Content-type: application/json; charset=utf-8');
-    res.writeHead(200);
+    res.setHeader('Content-Type', 'Content-type: application/json charset=utf-8')
+    res.writeHead(200)
     res.end(JSON.stringify([
         'name',
         'version',
@@ -32,12 +31,11 @@ function _httpHandler(req, res) {
         'license'
     ].reduce(
         (memo, field) => {
-            var value = packageInfo[field];
-            memo[field] = value;
-            return memo;
+            memo[field] = packageInfo[field]
+            return memo
         },
         {}
-    )));
+    )))
 }
 
 io.on('connection', function (socket) {
@@ -49,5 +47,5 @@ io.on('connection', function (socket) {
                 data
             )
         )
-    );
-});
+    )
+})

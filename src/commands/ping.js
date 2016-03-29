@@ -1,11 +1,11 @@
 //exports
 
-module.exports = _default;
+module.exports = _default
 
 // private
 
-const symbolRes = 'PONG';
+const symbolRes = 'PONG'
 
 function _default(socket) {
-    socket.emit(symbolRes);
+    socket.emit(symbolRes)
 }
